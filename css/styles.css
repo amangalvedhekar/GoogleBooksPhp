@@ -1,0 +1,20 @@
+.col-lg-4 {
+	margin-top: 4%;
+}
+
+.img-responsive {
+	opacity: 0.3; 
+	width: 100%;
+}
+
+#formDisplay {
+	position: absolute;
+	top:45%;
+	left :2%; 
+	right: 2%;
+}
+
+.none {
+	display: none;
+	
+}

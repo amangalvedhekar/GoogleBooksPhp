@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Google Books API demo</title>
+        <meta charset="UTF-8">
+        
+     
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="./css/styles.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+      <div class = "container">
+        <div class = "col-lg-4 col-lg-offset-3">
+        <a href='#postBookModal' id='getBookDetails' class="btn btn-success">Open Modal</a>
+        </div>
+      </div>
+       <!--Modal for user to enter ISBN -->
+          <div class = "modal fade" id = "postBookModal">
+            <div class='modal-dialog'>
+              <div class='modal-content'>
+                <div class = "modal-body" id ="getBooksImage">
+                  <h3 class="text-danger none"></h3>
+                  <img src = "img/search.png" class = "img-responsive"/>
+                   <div id="formDisplay">
+                    <form id="getBookSearch" role = "form">
+                      <div class='form-group input-group input-group-lg has-feedback'>
+                        <span class='input-group-addon'>
+                          <span class='glyphicon glyphicon-book'></span>    
+                        </span>
+                        <input type="tel" id="ISBNInput" class="form-control" placeholder="ISBN without hyphens(-)" name="ISBN" maxlength="13" autocomplete = "off" value=""/>  
+                        <span class = "input-group-btn"> 
+                          <button type="submit" class="btn btn-lg btn-default disabled" id="submitISBN">                      
+                            <span class="glyphicon glyphicon-search"></span>                     
+                          </button>
+                        </span>
+                      </div>
+                    </form>          
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div> 
+
+
+        <div class='modal fade' id='bookDetailsModal'>
+  <div class='modal-dialog'>
+    <div class='modal-content'>
+      <div class='modal-header'>
+        <span class='glyphicon glyphicon-modal-window'></span>
+        <a href='#' data-dismiss='modal' class='close'><span class='glyphicon glyphicon-remove'></span></a>
+          
+      </div>
+      <div class='modal-body'>
+        <div class="media">
+  <div class="media-left media-middle">
+   
+      <img class="media-object" src="img/125x125.jpg" alt="...">
+   
+  </div>
+  <div class="media-body">
+    <h4 class="media-heading"></h4>
+   <div class="bookInfo"></div>
+  </div>
+</div>
+      </div>
+      
+    </div>
+ </div>
+</div> 
+<!-- Include Custom JS-->
+    <script src="js/script.js"></script>
+    </body>
+</html>
